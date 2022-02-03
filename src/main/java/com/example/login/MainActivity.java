@@ -24,17 +24,16 @@ public class MainActivity extends AppCompatActivity {
     public void entrar(View view){
         String x ="renato";
         String y = "renato";
-        String password ="renato";
         EditText entrar = findViewById(R.id.editName);
         EditText senha = findViewById(R.id.editSenha);
         TextView resultado = findViewById(R.id.textResul);
-        String usuarioDigitado = entrar.getText().toString();
-        String senhaDigitada = senha.getText().toString();
+        String user = entrar.getText().toString();
+        String password = senha.getText().toString();
 
-        if(usuarioDigitado.isEmpty() || senhaDigitada.isEmpty()) {
+        if(user.isEmpty() || password.isEmpty()) {
             resultado.setText("Usuário ou senha não preenchida");
 
-        }else if (x.equals(usuarioDigitado) == true && y.equals(senhaDigitada) == true){
+        }else if (x.equals(user) == true && y.equals(password) == true){
                 resultado.setText("Olá renato");
             }else{
                resultado.setText("Login ou senha inválidos");
@@ -43,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Log.i(TAG, "entrar: "+ x.equals(usuarioDigitado));
-        Log.i(TAG, "entrar: "+ y.equals(senhaDigitada));
+        Log.i(TAG, "entrar: "+ x.equals(user));
+        Log.i(TAG, "entrar: "+ y.equals(password));
 
 
     }
